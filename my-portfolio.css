@@ -127,6 +127,24 @@ span{
     font-size: 1.8rem;
 }
 
+.contact-info {
+    margin: 1.5rem 0;
+}
+
+.contact-info p {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.contact{
+    background: var(--snd-bg-color);
+}
+.contact-info i {
+    color: var(--main-color);
+}
+
 .social-media a {
     display: inline-flex;
     align-items: center;
@@ -197,9 +215,28 @@ span{
 
 .about-content p {
     font-size: 1.6rem;
-    margin: 5rem 0 3rem;
+    margin: 2rem 0;
 }
 
+.about-content .skills-list {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.about-content .skills-list li {
+    margin-bottom: 0.8rem;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.about-content .skills-list strong {
+    color: var(--main-color);
+    font-weight: 600;
+}
+.skill{
+    background: var(--snd-bg-color);
+}
 .skills-container{
     display: flex;
     justify-content: center;
@@ -222,7 +259,7 @@ span{
 }
 
 .services {
-    background: var(--snd-bg-color);
+    background: var(--bg-color);
 }
 .services h2{
     margin-bottom: 5rem;
@@ -266,7 +303,7 @@ span{
 }
 
 .portfolio {
-    background: var(--bg-color)
+    background: var(--snd-bg-color);
 }
 
 .portfolio h2{
@@ -348,7 +385,7 @@ span{
 }
 
 .certificates{
-    background: var(--snd-bg-color);
+    background: var(--bg-color);
 }
 .certificates-card {
     display: flex;
@@ -388,6 +425,7 @@ span{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    
 }
 
 .contact form .input-box input,
@@ -396,9 +434,16 @@ span{
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
-    background: var(--snd-bg-color);
+    background: var(--bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
+    border: 1px solid var(--main-color);
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+   border: 2px solid var(--main-color);
+   box-shadow: 0 0 0.5rem rgba(89, 178, 244, 0.5);
 }
 
 .contact form .input-box input:hover,
@@ -424,7 +469,7 @@ span{
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--snd-bg-color);
+    background: var(--bg-color);
 }
 
 .footer-text{
@@ -471,10 +516,6 @@ span{
 
     .portfolio{
             padding-bottom: 7rem;
-    }
-
-    .contact {
-        min-height: auto;
     }
 
     .footer{
@@ -567,9 +608,8 @@ span{
         font-size: 50%;
     }
 
-    .contact form .input-box input{
-        width: 100%;
-    }
+  
+    
     .services-container .services-box{
         height: 350px;
         margin-right: 20px;
@@ -584,6 +624,131 @@ span{
     
     .services-box p {
         font-size: 1rem;
+    }
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.skill-category {
+    background: var(--snd-bg-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 0.2rem solid var(--bg-color);
+    transition: 0.5s ease;
+}
+
+.skill-category:hover {
+    border-color: var(--main-color);
+    transform: translateY(-0.5rem);
+}
+
+.skill-category h4 {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category ul li {
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+    color: var(--text-color);
+}
+
+.experience {
+    background: var(--bg-color);
+    padding-top: 70px;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.experience-box {
+    background: var(--snd-bg-color);
+    border-radius: 2rem;
+    padding: 2rem;
+    border: 0.2rem solid var(--bg-color);
+    transition: 0.5s ease;
+}
+
+.experience-box:hover {
+    border-color: var(--main-color);
+    transform: translateY(-0.5rem);
+}
+
+.experience-content {
+    padding: 1rem;
+}
+
+.experience-header {
+    margin-bottom: 1.5rem;
+}
+
+.experience-header h3 {
+    font-size: 2.2rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-header h4 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-header .duration {
+    font-size: 1.4rem;
+    color: var(--main-color);
+    font-style: italic;
+}
+
+.experience-content ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.experience-content ul li {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin: 1rem 0;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.experience-content ul li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--main-color);
+}
+
+@media (max-width: 768px) {
+    .experience-box {
+        padding: 1.5rem;
+    }
+    
+    .experience-header h3 {
+        font-size: 2rem;
+    }
+    
+    .experience-header h4 {
+        font-size: 1.6rem;
+    }
+    
+    .experience-content ul li {
+        font-size: 1.4rem;
     }
 }
 
